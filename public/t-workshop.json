@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Effective Communication Skills",
+        "image": "https://i.ibb.co/C2HccYm/stock-vector-this-colorful-illustration-shows-effective-vertical-communication-within-a-team-1621037.jpg",
+        "price": "$149",
+        "description": "Improve verbal and non-verbal communication skills for professional success.",
+        "button": "Register Now",
+        "id": 100001
+    },
+    {
+        "name": "Leadership and Team Building",
+        "image": "https://i.ibb.co/sCb5yTJ/team-building-busines-collaboration-development-concept-75526336.webp",
+        "price": "$199",
+        "description": "Enhance leadership qualities and foster team collaboration for organizational growth.",
+        "button": "Enroll Now",
+        "id": 100002
+    },
+    {
+        "name": "Time Management Mastery",
+        "image": "https://i.ibb.co/sCb5yTJ/team-building-busines-collaboration-development-concept-75526336.webp",
+        "price": "$129",
+        "description": "Learn effective time management techniques to boost productivity and reduce stress.",
+        "button": "Book Your Spot",
+        "id": 100003
+    },
+    {
+        "name": "Creative Problem Solving",
+        "image": "https://i.ibb.co/sCb5yTJ/team-building-busines-collaboration-development-concept-75526336.webp",
+        "price": "$169",
+        "description": "Develop innovative problem-solving skills for tackling challenges in the workplace.",
+        "button": "Join the Workshop",
+        "id": 100004
+    },
+    {
+        "name": "Negotiation Strategies for Success",
+        "image": "https://i.ibb.co/sCb5yTJ/team-building-busines-collaboration-development-concept-75526336.webp",
+        "price": "$179",
+        "description": "Master negotiation techniques to achieve win-win outcomes in professional dealings.",
+        "button": "Sign Up Now",
+        "id": 100005
+    },
+    {
+        "name": "Emotional Intelligence in the Workplace",
+        "image": "https://i.ibb.co/sCb5yTJ/team-building-busines-collaboration-development-concept-75526336.webp",
+        "price": "$159",
+        "description": "Enhance emotional intelligence for better workplace relationships and productivity.",
+        "button": "Reserve Your Seat",
+        "id": 100006
+    }
+]
