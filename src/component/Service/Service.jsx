@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Service = ({ service }) => {
     return (
@@ -8,7 +9,7 @@ const Service = ({ service }) => {
                 <p>{service.description}</p>
                 <p>{service.price}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Enrolled</button>
+                    <Link to={`/${service.id}`}><button className="btn btn-primary">Details</button></Link>
                 </div>
             </div>
         </div>

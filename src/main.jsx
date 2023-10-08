@@ -10,6 +10,9 @@ import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import AuthContext from './Provider/AuthContext';
+import PrivateRoute from './Route/PrivateRoute';
+import Workshop from './Pages/Workshop/Workshop';
+import Courses from './Pages/Course/Courses';
 
 
 const router = createBrowserRouter([
@@ -28,6 +31,18 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>,
+      },
+      {
+        path: '/:id',
+        element: <PrivateRoute><p>jfoshkjhs</p></PrivateRoute>,
+      },
+      {
+        path: '/workshop',
+        element: <PrivateRoute><Workshop></Workshop></PrivateRoute>,
+      },
+      {
+        path: '/courses',
+        element: <PrivateRoute><Courses></Courses></PrivateRoute>,
       },
     ]
   },

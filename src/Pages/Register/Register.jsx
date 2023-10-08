@@ -1,9 +1,14 @@
+import { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
+import { userContext } from "../../Provider/AuthContext";
 
 const Register = () => {
+    const { createUser } = useContext(userContext);
+    const [currentUser, setCurrentUser] = useState();
+    console.log(currentUser);
 
-    const handleLogin = (e) => {
+    const handleRegitration = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
@@ -18,6 +23,12 @@ const Register = () => {
         else if (!/[!S#$%&?]/.test(password)) {
             return toast.error('At least 1 special character');
         }
+
+        createUser(email, password)
+            .then(res => {
+                const signinUser = res.user;
+                setCurrentUser(signinUser);
+            })
         console.log(email, password);
     }
     return (
@@ -25,7 +36,7 @@ const Register = () => {
             <div className="hero-content flex-col">
                 <h1 className=" text-3xl">Please Register</h1>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <form onSubmit={handleLogin} className="card-body">
+                    <form onSubmit={handleRegitration} className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
@@ -38,7 +49,7 @@ const Register = () => {
                             </label>
                             <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                             <label className="label">
-                                <p href="#" className="label-text-alt link link-hover">Already have a account? <Link to='/login'>Please Login</Link></p>
+                                <p href="#" className="label-text-alt link link-hover">Already have a account? <Link to='/login' className=" text-green-500 text-xl font-bold">Please Login</Link></p>
                             </label>
                         </div>
                         <div className="form-control mt-6">
@@ -46,6 +57,7 @@ const Register = () => {
                         </div>
                     </form>
                 </div>
+                {currentUser && <h1 className="  text-green-500 text-xl font-bold">successfully register complete</h1>}
             </div>
         </div>
     );

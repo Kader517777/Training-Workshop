@@ -1,6 +1,16 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink, useParams } from "react-router-dom";
+import { userContext } from "../../Provider/AuthContext";
 
 const Navber = () => {
+    const { user, signUp } = useContext(userContext);
+    const detailsId = useParams();
+
+    const handleSignOut = () => {
+        signUp();
+    }
+
+    console.log(detailsId);
     return (
         <div className="container mx-auto mb-8 navbar bg-base-100">
             <div className="navbar-start">
@@ -40,13 +50,40 @@ const Navber = () => {
                         Home
                     </NavLink></li>
                     <li><NavLink
+                        to="/workshop"
+                        className={({ isActive }) =>
+                            isActive ? " text-2xl font-bold text-rose-400 bg-orange-200" : "text-2xl font-bold text-rose-400"
+                        }
+                    >
+                        Workshop
+                    </NavLink></li>
+                    <li><NavLink
+                        to="/courses"
+                        className={({ isActive }) =>
+                            isActive ? " text-2xl font-bold text-rose-400 bg-orange-200" : "text-2xl font-bold text-rose-400"
+                        }
+                    >
+                        Courses
+                    </NavLink></li>
+                    {!user ? <li><NavLink
                         to="/login"
                         className={({ isActive }) =>
                             isActive ? " text-2xl text-rose-400 bg-orange-200 font-bold" : "text-2xl font-bold text-rose-400"
                         }
                     >
                         Login
-                    </NavLink></li>
+                    </NavLink></li> :
+
+                        <li><NavLink
+                            to="/login"
+                            className={({ isActive }) =>
+                                isActive ? " text-2xl text-rose-400 bg-orange-200 font-bold" : "text-2xl font-bold text-rose-400"
+                            }
+                        >
+                            <button onClick={handleSignOut}>Logout</button>
+                        </NavLink></li>
+
+                    }
                 </ul>
             </div>
         </div>
