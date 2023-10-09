@@ -4,7 +4,7 @@ const Benefits = () => {
         <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-[whitesmoke] py-5 my-7 gap-8">
             <div className="ml-20">
                 <h1 className="text-3xl font-bold mb-6">Workshops Benefits</h1>
-                <ul className=" list-disc ml-5">
+                <ul className=" list-disc ml-2 lg:ml-5">
                     <li>Hands-on Learning</li>
                     <li className="my-4">Interactive Environment</li>
                     <li>Skill Development</li>
@@ -14,7 +14,7 @@ const Benefits = () => {
                     <li>Problem-Solving and Creativity</li>
                 </ul>
             </div>
-            <div>
+            <div className="grid md:hidden lg:flex">
                 <img src="https://i.ibb.co/C2HccYm/stock-vector-this-colorful-illustration-shows-effective-vertical-communication-within-a-team-1621037.jpg" alt="" />
             </div>
             <div className="ml-20">

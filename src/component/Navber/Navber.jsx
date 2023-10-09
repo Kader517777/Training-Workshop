@@ -72,7 +72,7 @@ const Navber = () => {
                         }
                     </ul>
                 </div>
-                <h1 className="py-2 px-3 text-xl font-bold text-[white] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">Training~~Workshop</h1>
+                <h1 className="py-2 px-3 text-xl font-bold text-[white] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">Workshop & Webinar</h1>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
