@@ -51,25 +51,7 @@ const Navber = () => {
                         >
                             Webinar
                         </NavLink></li>
-                        {!user ? <li><NavLink
-                            to="/login"
-                            className={({ isActive }) =>
-                                isActive ? " text-2xl text-[white] bg-[#ff6900] font-bold" : "text-2xl font-bold text-rose-400"
-                            }
-                        >
-                            Login
-                        </NavLink></li> :
 
-                            <li><NavLink
-                                to="/login"
-                                className={({ isActive }) =>
-                                    isActive ? " text-2xl text-[white] bg-[#ff6900] font-bold" : "text-2xl font-bold text-rose-400"
-                                }
-                            >
-                                <button onClick={handleSignOut}>SignUp</button>
-                            </NavLink></li>
-
-                        }
                     </ul>
                 </div>
                 <h1 className="py-2 px-3 text-xl font-bold text-[white] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">Workshop & Webinar</h1>
