@@ -1,5 +1,5 @@
 
-const Courses = () => {
+const Webiner = () => {
     return (
         <div className="max-w-md mx-auto bg-white p-8 rounded shadow-md">
 
@@ -16,4 +16,4 @@ const Courses = () => {
     );
 };
 
-export default Courses;
+export default Webiner;

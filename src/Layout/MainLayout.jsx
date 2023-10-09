@@ -5,7 +5,7 @@ import { Toaster } from "react-hot-toast";
 
 const MainLayout = () => {
     return (
-        <div className="bg-orange-100">
+        <div className="bg-[white]">
             <Navber></Navber>
             <Outlet></Outlet>
             <Footer></Footer>

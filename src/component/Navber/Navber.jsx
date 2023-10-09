@@ -3,7 +3,7 @@ import { Link, NavLink, useParams } from "react-router-dom";
 import { userContext } from "../../Provider/AuthContext";
 
 const Navber = () => {
-    const { user, signUp } = useContext(userContext);
+    const { user, signUp, loader } = useContext(userContext);
     const detailsId = useParams();
 
     const handleSignOut = () => {
@@ -12,7 +12,7 @@ const Navber = () => {
 
     console.log(detailsId);
     return (
-        <div className="container mx-auto mb-8 navbar bg-base-100">
+        <div className="container mx-auto mb-8 navbar bg-[whitesmoke]">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -22,7 +22,7 @@ const Navber = () => {
                         <li><NavLink
                             to="/"
                             className={({ isActive }) =>
-                                isActive ? " text-2xl text-rose-400 bg-orange-200 font-bold" : "text-2xl font-bold text-rose-400"
+                                isActive ? " text-2xl text-[white] bg-[#ff6900] font-bold" : "text-2xl font-bold text-rose-400"
                             }
                         >
                             Home
@@ -30,21 +30,21 @@ const Navber = () => {
                         <li><NavLink
                             to="/login"
                             className={({ isActive }) =>
-                                isActive ? " text-2xl text-rose-400 bg-orange-200 font-bold" : "text-2xl font-bold text-rose-400"
+                                isActive ? " text-2xl text-[white] bg-[#ff6900] font-bold" : "text-2xl font-bold text-rose-400"
                             }
                         >
                             Login
                         </NavLink></li>
                     </ul>
                 </div>
-                <h1 className="btn btn-ghost normal-case text-xl">Training~~Workshop</h1>
+                <h1 className="py-2 px-3 text-xl font-bold text-[white] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">Training~~Workshop</h1>
             </div>
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li><NavLink
                         to="/"
                         className={({ isActive }) =>
-                            isActive ? " text-2xl font-bold text-rose-400 bg-orange-200" : "text-2xl font-bold text-rose-400"
+                            isActive ? " text-2xl font-bold text-[white] bg-[#ff6900]" : "text-2xl font-bold text-rose-400"
                         }
                     >
                         Home
@@ -52,23 +52,23 @@ const Navber = () => {
                     <li><NavLink
                         to="/workshop"
                         className={({ isActive }) =>
-                            isActive ? " text-2xl font-bold text-rose-400 bg-orange-200" : "text-2xl font-bold text-rose-400"
+                            isActive ? " text-2xl font-bold text-[white] bg-[#ff6900]" : "text-2xl font-bold text-rose-400"
                         }
                     >
                         Workshop
                     </NavLink></li>
                     <li><NavLink
-                        to="/courses"
+                        to="/webinar"
                         className={({ isActive }) =>
-                            isActive ? " text-2xl font-bold text-rose-400 bg-orange-200" : "text-2xl font-bold text-rose-400"
+                            isActive ? " text-2xl font-bold text-[white] bg-[#ff6900]" : "text-2xl font-bold text-rose-400"
                         }
                     >
-                        Courses
+                        Webinar
                     </NavLink></li>
                     {!user ? <li><NavLink
                         to="/login"
                         className={({ isActive }) =>
-                            isActive ? " text-2xl text-rose-400 bg-orange-200 font-bold" : "text-2xl font-bold text-rose-400"
+                            isActive ? " text-2xl text-[white] bg-[#ff6900] font-bold" : "text-2xl font-bold text-rose-400"
                         }
                     >
                         Login
@@ -77,10 +77,10 @@ const Navber = () => {
                         <li><NavLink
                             to="/login"
                             className={({ isActive }) =>
-                                isActive ? " text-2xl text-rose-400 bg-orange-200 font-bold" : "text-2xl font-bold text-rose-400"
+                                isActive ? " text-2xl text-[white] bg-[#ff6900] font-bold" : "text-2xl font-bold text-rose-400"
                             }
                         >
-                            <button onClick={handleSignOut}>Logout</button>
+                            <button onClick={handleSignOut}>SignUp</button>
                         </NavLink></li>
 
                     }

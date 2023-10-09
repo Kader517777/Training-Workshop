@@ -5,7 +5,7 @@ import { userContext } from "../../Provider/AuthContext";
 
 
 const Login = () => {
-    const { loggedinUser } = useContext(userContext);
+    const { loggedinUser, createGoogleUser } = useContext(userContext);
     const [currentUser, setCurrentUser] = useState();
 
     const handleLogin = (e) => {
@@ -31,7 +31,15 @@ const Login = () => {
         console.log(email, password, currentUser);
     }
 
-
+    const handleGooglePopUp = () => {
+        createGoogleUser()
+            .then((result) => {
+                console.log(result.user);
+            })
+            .then((error) => {
+                console.log(error);
+            })
+    }
     return (
         <div className=" container mx-auto hero min-h-screen bg-base-200">
             <div className="hero-content flex-col ">
@@ -56,9 +64,11 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <button type="submit" className="btn btn-primary">Login</button>
                         </div>
+                        <h1 onClick={handleGooglePopUp} className="btn text-green-500 text-xl font-bold">Login with Google</h1>
                     </form>
+
                 </div>
-                <h1 className="  text-green-500 text-xl font-bold">Login status</h1>
+
             </div>
         </div>
     );
