@@ -14,6 +14,7 @@ import PrivateRoute from './Route/PrivateRoute';
 import Workshop from './Pages/Workshop/Workshop';
 import Webinar from './Pages/Webinar/Webinar';
 import DetailsService from './Pages/DetailsService/DetailsService';
+import ErrorPage from './Pages/ErrorPage/ErrorPage';
 
 
 const router = createBrowserRouter([
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: '/webinar',
         element: <PrivateRoute><Webinar></Webinar></PrivateRoute>,
+      },
+      {
+        path: '*',
+        element: <ErrorPage></ErrorPage>,
       },
     ]
   },

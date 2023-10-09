@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const DetailsService = () => {
     const dynamicID = useParams();
@@ -23,12 +23,12 @@ const DetailsService = () => {
                         <p className=" text-base md:text-xl">{findService?.description}</p>
                         <p className=" text-xl text-orange-500 font-bold">{findService?.price}</p>
                         <div className="card-actions justify-end grid grid-cols-2 mt-7">
-                            <button onClick={''} className="btn bg-[#ff6900] text-[white] w-full text-2xl">Workshop</button>
-                            <button onClick={''} className="btn bg-[#ff6900] text-[white] w-full text-2xl">Webinar</button>
+                            <Link to='/workshop'><button onClick={''} className="btn bg-[#ff6900] text-[white] w-full text-2xl">Workshop</button></Link>
+                            <Link to='/webinar'><button onClick={''} className="btn bg-[#ff6900] text-[white] w-full text-2xl">Webinar</button></Link>
                         </div>
                     </div>
                 </div> :
-                <div className="text-3xl text-green-500 grid justify-center items-center h-screen font-bold"><p>Please choose your Event</p></div>
+                <div className="text-3xl text-green-500 grid justify-center items-center h-screen font-bold"><p>Please choose your Event In Home page</p></div>
 
             }
         </>

@@ -13,7 +13,7 @@ const Workshop = () => {
 
     return (
         <div className=" lg:container lg:mx-auto mx-5 card my-12  bg-base-100 shadow-xl">
-            <figure><img className="md:h-[450px] w-full" src="https://i.ibb.co/TbcvvbP/images.jpg" alt="Shoes" /></figure>
+            <figure><img className="md:h-[450px] w-full" src="https://i.ibb.co/SvGJ38r/1674543147-how-to-improve-your-creativity-and-problemsolving-skills-01.jpg" alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">Topics Covered in a Development Workshop</h2>
                 <div className=" grid justify-center">
@@ -25,19 +25,19 @@ const Workshop = () => {
 
                     <div className="grid grid-cols-2">
                         <div>
-                            <h1>Workshop Details:</h1>
-                            <ul className="list-disc text-left pl-4">
-                                <li className="mb-2">Date: </li>
-                                <li className="mb-2">Time:</li>
-                                <li className="mb-2">Duration:</li>
-                                <li className="mb-2">Location:</li>
-                                <li className="mb-2">Facilitator:</li>
-                                <li className="mb-2">Registration Fee:</li>
+                            <h1 className=" text-3xl font-bold text-green-600 my-5">Workshop Details:</h1>
+                            <ul className="list-disc text-left pl-4 text-xl">
+                                <li className="mb-2">Date: 15-10-23</li>
+                                <li className="mb-2">Time: 09:00 AM</li>
+                                <li className="mb-2">Duration: 3 hours</li>
+                                <li className="mb-2">Location: A/B nonogram, Rajbari</li>
+                                <li className="mb-2">Facilitator: Rafiqul Islam</li>
+                                <li className="mb-2">Registration Fee: 78$</li>
                             </ul>
                         </div>
-                        <div className=" hidden md:grid">
-                            <p>Workshop Agenda:</p>
-                            <ul className="list-disc text-left pl-4">
+                        <div className=" hidden md:grid  my-5">
+                            <p className="text-3xl font-bold text-green-600 my-5">Workshop Agenda:</p>
+                            <ul className="list-disc text-left pl-4 text-xl">
                                 <li className="mb-2">Understanding the Importance of Effective Communication </li>
                                 <li className="mb-2">Verbal Communication Skills</li>
                                 <li className="mb-2">Non-Verbal Communication and Body Language</li>
