@@ -6,7 +6,6 @@ import { userContext } from "../../Provider/AuthContext";
 
 const Login = () => {
     const { loggedinUser, createGoogleUser } = useContext(userContext);
-    const [currentUser, setCurrentUser] = useState();
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -25,25 +24,26 @@ const Login = () => {
         }
 
         loggedinUser(email, password)
-            .then(res => {
-                setCurrentUser(res.user);
+            .then(() => {
+                toast.success('Successfully Login!!');
             })
-        console.log(email, password, currentUser);
+            .then((error) => {
+                console.log(error.code);
+            })
     }
 
     const handleGooglePopUp = () => {
         createGoogleUser()
-            .then((result) => {
-                console.log(result.user);
+            .then(() => {
+                toast.success('Successfully Login!!');
             })
-            .then((error) => {
-                console.log(error);
+            .then(() => {
             })
     }
     return (
         <div className=" container mx-auto hero min-h-screen bg-base-200">
             <div className="hero-content flex-col ">
-                <h1 className=" text-3xl">Please Login</h1>
+                <h1 className=" text-3xl font-bold text-green-500">Please Login</h1>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <form onSubmit={handleLogin} className="card-body">
                         <div className="form-control">

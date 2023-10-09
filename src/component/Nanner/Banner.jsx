@@ -1,15 +1,12 @@
 
 const Banner = () => {
     return (
-        <div className="carousel w-full h-[200px] md:h-[500px] ">
-            <div id="slide1" className="carousel-item relative w-full">
-                <img src="https://i.ibb.co/3p9fJJt/istockphoto-1359879029-612x612.jpg" className="w-full h-full " />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-2/4">
-                    <a href="#slide6" className="btn btn-circle">❮</a>
-                    <a href="#slide2" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide2" className="carousel-item relative w-full">
+        <div className=" w-full h-[200px] md:h-[500px] ">
+
+            <img src="https://i.ibb.co/McmMVsq/Teaching-Financial-Literacy.jpg" className="w-full h-full " />
+            {/* <img src="https://i.ibb.co/3p9fJJt/istockphoto-1359879029-612x612.jpg" className="w-full h-full " /> */}
+
+            {/* <div id="slide2" className="carousel-item relative w-full">
                 <img src="https://i.ibb.co/WHwVKB5/red-man-as-a-leader-with-team-stock-photo-Slide01.jpg" className="w-full h-full" />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-2/4">
                     <a href="#slide1" className="btn btn-circle">❮</a>
@@ -43,7 +40,7 @@ const Banner = () => {
                     <a href="#slide5" className="btn btn-circle">❮</a>
                     <a href="#slide1" className="btn btn-circle">❯</a>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

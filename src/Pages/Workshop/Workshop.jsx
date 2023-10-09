@@ -12,7 +12,7 @@ const Workshop = () => {
     }
 
     return (
-        <div className=" container mx-auto card my-12  bg-base-100 shadow-xl">
+        <div className=" lg:container lg:mx-auto mx-5 card my-12  bg-base-100 shadow-xl">
             <figure><img className="md:h-[450px] w-full" src="https://i.ibb.co/TbcvvbP/images.jpg" alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">Topics Covered in a Development Workshop</h2>

@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 import { userContext } from "../../Provider/AuthContext";
 
 const Register = () => {
-    const { createUser } = useContext(userContext);
-    const [currentUser, setCurrentUser] = useState();
-    console.log(currentUser);
+    const { createEmailPasswordUser } = useContext(userContext);
 
     const handleRegitration = (e) => {
         e.preventDefault();
@@ -24,17 +22,15 @@ const Register = () => {
             return toast.error('At least 1 special character');
         }
 
-        createUser(email, password)
-            .then(res => {
-                const signinUser = res.user;
-                setCurrentUser(signinUser);
+        createEmailPasswordUser(email, password)
+            .then(() => {
+                toast.success('Successfully Login!!');
             })
-        console.log(email, password);
     }
     return (
         <div className=" container mx-auto hero min-h-screen bg-base-200">
             <div className="hero-content flex-col">
-                <h1 className=" text-3xl">Please Register</h1>
+                <h1 className=" text-3xl font-bold text-green-500">Please Register</h1>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <form onSubmit={handleRegitration} className="card-body">
                         <div className="form-control">
@@ -57,7 +53,6 @@ const Register = () => {
                         </div>
                     </form>
                 </div>
-                {currentUser && <h1 className="  text-green-500 text-xl font-bold">successfully register complete</h1>}
             </div>
         </div>
     );
