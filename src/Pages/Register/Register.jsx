@@ -10,7 +10,7 @@ const Register = () => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-
+        e.target.reset();
 
         if (password < 6) {
             return toast.error('At least 6 characters');
